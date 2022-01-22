@@ -2000,12 +2000,3 @@ note-default {
     margin-left: 1rem;
   }
 }
-
-#veditor {
-  background-image: url(https://cdn.jsdelivr.net/gh/drew233/cdn/20200409110727.webp);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
-  background-color: rgba(255, 255, 255, 0);
-  resize: vertical
-}
