@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.yiwa.ga/2022/02/02/clash%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B1%E4%BA%AB%E5%A4%B1%E8%B4%A5/</loc>
+    
+    <lastmod>2022-02-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.yiwa.ga/2022/01/30/%E4%BF%AE%E5%A4%8Derror-unknown-filesystem-grub-rescue/</loc>
+    
+    <lastmod>2022-02-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.yiwa.ga/about/index.html</loc>
+    
+    <lastmod>2022-02-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.yiwa.ga/ourtalk.html</loc>
     
     <lastmod>2022-01-24</lastmod>
@@ -37,19 +64,10 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>http://blog.yiwa.ga/about/index.html</loc>
-    
-    <lastmod>2022-01-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>http://blog.yiwa.ga/</loc>
-    <lastmod>2022-01-24</lastmod>
+    <lastmod>2022-02-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -57,14 +75,70 @@
   
   <url>
     <loc>http://blog.yiwa.ga/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
-    <lastmod>2022-01-24</lastmod>
+    <lastmod>2022-02-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.yiwa.ga/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2022-01-24</lastmod>
+    <lastmod>2022-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.yiwa.ga/tags/Linux/</loc>
+    <lastmod>2022-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.yiwa.ga/tags/Windows/</loc>
+    <lastmod>2022-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.yiwa.ga/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2022-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.yiwa.ga/tags/grub/</loc>
+    <lastmod>2022-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.yiwa.ga/tags/Windows%E6%9B%B4%E6%96%B0/</loc>
+    <lastmod>2022-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.yiwa.ga/tags/clash/</loc>
+    <lastmod>2022-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.yiwa.ga/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc>
+    <lastmod>2022-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.yiwa.ga/tags/%E5%B1%80%E5%9F%9F%E7%BD%91/</loc>
+    <lastmod>2022-02-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -73,21 +147,56 @@
   
   <url>
     <loc>http://blog.yiwa.ga/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
-    <lastmod>2022-01-24</lastmod>
+    <lastmod>2022-02-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.yiwa.ga/categories/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2022-01-24</lastmod>
+    <lastmod>2022-02-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://blog.yiwa.ga/categories/%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
-    <lastmod>2022-01-24</lastmod>
+    <lastmod>2022-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.yiwa.ga/categories/Linux/</loc>
+    <lastmod>2022-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.yiwa.ga/categories/Linux/%E5%90%AF%E5%8A%A8%E5%BC%82%E5%B8%B8/</loc>
+    <lastmod>2022-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.yiwa.ga/categories/Windows/</loc>
+    <lastmod>2022-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.yiwa.ga/categories/Windows/%E6%9B%B4%E6%96%B0/</loc>
+    <lastmod>2022-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.yiwa.ga/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc>
+    <lastmod>2022-02-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

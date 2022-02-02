@@ -4,6 +4,74 @@
   
   
   <entry>
+    <title>clash局域网共享失败</title>
+    <link href="/2022/02/02/clash%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B1%E4%BA%AB%E5%A4%B1%E8%B4%A5/"/>
+    <url>/2022/02/02/clash%E5%B1%80%E5%9F%9F%E7%BD%91%E5%85%B1%E4%BA%AB%E5%A4%B1%E8%B4%A5/</url>
+    
+    <content type="html"><![CDATA[<h4 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h4><p>clash for windows开启Allow LAN后即将设备作为代理服务器为局域网中的设备提供代理服务。这种局域网共享的功能在很多代理软件中都存在。比如IOS端的Shadowrocket就可以在设置中打开代理共享，其余设备只需要设置好代理服务器的ip地址和端口号即可。可是clash for windows在开启Allow LAN后很多人Github上反应无法进行代理共享。</p><h4 id="原因猜测"><a href="#原因猜测" class="headerlink" title="原因猜测"></a>原因猜测</h4><p>由于无法进行代理共享并不是普遍情况所以排除软件本身的问题。然后就怀疑Windows防火墙是否没有开放相应端口。这里我的clash需要开放的端口为7890(端口号在clash for windows中查询)。在<a href="ms-settings:windowsdefender?activationSource=SMC-IA-4028544">Windows安全中心</a>中关闭了公用网络防火墙后发现代理可以成功共享。所以共享失败的原因应该是防火墙没有开放相应代理端口。</p><h4 id="防火墙开放端口"><a href="#防火墙开放端口" class="headerlink" title="防火墙开放端口"></a>防火墙开放端口</h4><p>由于关闭Windows防火墙并不是一件值得推荐做的事，所以只需要在防火墙上开放对应端口也可以实现代理共享。由于Windows的防火墙开放端口需要新建出站规则和入站规则两套</p><h5 id="入站规则"><a href="#入站规则" class="headerlink" title="入站规则"></a>入站规则</h5><ol><li>点击高级设置</li></ol><img src="https://cdn.jsdelivr.net/gh/Yiwa1/Picture-bed/community/202202021833766.png" style="zoom: 67%;" /><ol start="2"><li><p>右击入站规则点击新建规则</p></li><li><p>设置要创建的规则类型为端口</p></li><li><p>设置此规则应用于TCP,应用于特定本地端口7890(端口号根据clash for windows中显示的而定)</p></li><li><p>设置允许连接</p></li><li><p>何时运用规则三个全选</p></li><li><p>名称随意</p></li></ol><h5 id="出站规则"><a href="#出站规则" class="headerlink" title="出站规则"></a>出站规则</h5><p>创建方法和入站规则一致。一定要创建出站规则，一定要创建出站规则，一定要创建出站规则。</p><h4 id="杀毒软件"><a href="#杀毒软件" class="headerlink" title="杀毒软件"></a>杀毒软件</h4><p>在这里解释一下为什么有的人不需要设置端口的开放就可以共享代理。有的杀毒软件会默认接管系统的防火墙，这些杀毒软件可能会自动改变防火墙的相关设置或开放端口。因为博主的电脑上只有Windows Defender所以就需要进行相关端口设置。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>科学上网</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>clash</tag>
+      
+      <tag>科学上网</tag>
+      
+      <tag>局域网</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>修复error:unknown filesystem grub rescue</title>
+    <link href="/2022/01/30/%E4%BF%AE%E5%A4%8Derror-unknown-filesystem-grub-rescue/"/>
+    <url>/2022/01/30/%E4%BF%AE%E5%A4%8Derror-unknown-filesystem-grub-rescue/</url>
+    
+    <content type="html"><![CDATA[<h4 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h4><p>博主的电脑为Windows10+Manjaro双系统，在将Windows10版本由21H1升级为21H2的过程中出现了无法进入系统的情况，情况如下图。</p><img src="https://cdn.jsdelivr.net/gh/yiwa1/Picture-bed/linux/202201301759757.png" style="zoom:67%;" /><p>Google了一下才知道原来是找不到系统盘了，所以只要设置好启动路径就可以正常进入grub界面了。下面介绍如何进行相关设置。</p><h4 id="查看所有挂载盘"><a href="#查看所有挂载盘" class="headerlink" title="查看所有挂载盘"></a>查看所有挂载盘</h4><figure class="highlight powershell"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs powershell">grub rescue&gt;<span class="hljs-built_in">ls</span><br></code></pre></td></tr></table></figure><p>该命令可以查看当前所有的盘符，每个人各不相同。博主的盘符如下。</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell">(hd0) (hd0,pst12) (hd0,pst11) (hd0,pst10) (hd0,pst9) (hd0,pst8) (hd0,pst7) (hd0,pst6) (hd0,pst5) (hd0,pst4) (hd0,pst3) (hd0,pst2)<br>(hd0,pst1)<br></code></pre></td></tr></table></figure><h4 id="找到安装系统的盘"><a href="#找到安装系统的盘" class="headerlink" title="找到安装系统的盘"></a>找到安装系统的盘</h4><p>从右至左依次输入一下命令查看是否是系统盘</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">ls</span> &lt;盘符&gt;/boot/grub<br></code></pre></td></tr></table></figure><p>比如博主第一个检查</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">ls</span> (hd0,pst1)/boot/grub<br></code></pre></td></tr></table></figure><p>尝试所有盘符直到显示的内容不再为error: unknown filesystem。尝试下来博主的系统盘为(hd0,pst7)。</p><h4 id="设置路径"><a href="#设置路径" class="headerlink" title="设置路径"></a>设置路径</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">set</span> root=&lt;系统盘符&gt;/boot/grub<br><span class="hljs-built_in">set</span> prefix=&lt;系统盘符&gt;/boot/grub<br></code></pre></td></tr></table></figure><p>博主的路径设置</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">set</span> root=(hd0,pst7)/boot/grub<br><span class="hljs-built_in">set</span> prefix=(hd0,pst7)/boot/grub<br></code></pre></td></tr></table></figure><h4 id="加载模块"><a href="#加载模块" class="headerlink" title="加载模块"></a>加载模块</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell">insmod normal<br>normal<br></code></pre></td></tr></table></figure><p>将相关模块加载进内核并正常启动，这样就可以看到你的grub界面了，选择相应系统进入即可。</p><h4 id="彻底根除"><a href="#彻底根除" class="headerlink" title="彻底根除"></a>彻底根除</h4><p>原本以为可以不用再担心了，可在更新完系统重启时又出现了这个error，此时博主内心无数草泥马狂奔。</p><img src="https://cdn.jsdelivr.net/gh/yiwa1/Picture-bed/linux/202201301844057.png" alt="小草" style="zoom:67%;display:block;margin:0 auto;" /><p>Google了一下找到了良方。进入Linux系统，在terminal中依次输入以下命令即可。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo update-grub<br>sudo grub-install /dev/sda<br></code></pre></td></tr></table></figure><p>这样就再也看不到这个error了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Linux</category>
+      
+      <category>启动异常</category>
+      
+      <category>Windows</category>
+      
+      <category>更新</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>Windows</tag>
+      
+      <tag>双系统</tag>
+      
+      <tag>grub</tag>
+      
+      <tag>Windows更新</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>计算机网络-CS144</title>
     <link href="/2022/01/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%20CS%20144/"/>
     <url>/2022/01/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%20CS%20144/</url>
